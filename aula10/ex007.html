@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#res{
+            margin: 10px;
+            width: 45vw;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: rgba(0, 0, 0, 0.637);
+            color: white;
+        }
+    </style>
+    <title>Somando...</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="n1" id="n1"> + <!--Recebe 1 número de entrada-->
+    <input type="number" name="n2" id="n2"> <!--Recebe 2 número de entrada -->
+    <input type="submit" value="Somar" onclick="somar()"> <!--Envia os dados-->
+
+    <div id="res">Resultado</div>
+
+    <script>
+
+        function somar(){
+            var n1 = window.document.getElementById('n1') //Guarda os dados do 1 número
+            var n2 = window.document.getElementById('n2') //Guarda os dados do 2 número
+            var resultado = window.document.getElementById('res') //Guarda os dados do resultado
+            var número1 = Number(n1.value) //converte os dados n1 pra números
+            var número2 = Number(n2.value) //converte os dados n2 pra números
+
+            var s = número1 + número2 //Soma os dois resultados
+
+            resultado.innerHTML = `O resultado da soma de ${número1} + ${número2} = <strong>${s}</strong>` //Imprime o resuldado dentro da div Resultado
+
+
+
+            
+        
+        }
+    </script>
+
+</body>
+</html>

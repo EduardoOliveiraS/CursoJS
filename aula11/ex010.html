@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #res{
+            margin-top: 10px;
+            background-color: rgba(0, 0, 0, 0.658);
+            padding: 10px;
+            border-radius: 7px;
+            color: white;
+            width: 50vw;
+
+        }
+    </style>
+</head>
+<body>
+    Velocidade do veículo: <input type="number" name="txtvel" id="txtvel"> Km/H
+    <input type="submit" value="Verificar" onclick="verificar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function verificar(){
+
+            vel = document.getElementById('txtvel')
+            velocidade = Number(vel.value)
+            resultado = document.getElementById('res')
+            if (velocidade > 60){
+                resultado.innerHTML = "A velocidade permitida 60 km/h.MULTADO!"
+            }
+            else{
+                resultado.innerHTML = "A velocidade é ideal!"
+            }
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
